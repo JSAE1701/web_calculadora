@@ -1,0 +1,40 @@
+<!--
+    Los operadores son: +, -, *, /, x^2, sqrt, x^y.
+    Los números son flotantes y reales, así como los resultados.
+    Dichos resultados se muestran en pantalla.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <title>Calculadora</title>
+        <script src="calc.js"></script>
+    </head>
+    <body class="bg-warning p-4 text-black-50 bg-opacity-10">
+        <h1>Calculadora simple</h1> <!-- Título -->
+        <h2>Esta aplicación asume como máximo dos entradas enteras o flotantes</h2> <!-- Descripción rápida-->
+        <div>
+            <label>Escribe el primer número x=</label> <!-- Primer número -->
+            <input type="text" id="num1" placeholder="0"></input>
+            <label>Escribe el segundo número y=</label> <!-- Segundo número -->
+            <input type="text" id="num2" placeholder="0"></input>
+        </div>
+        <div class="my-3"> <!-- Operadores -->
+            <label>Selecciona el operador</label>
+            <button class="btn btn-primary m-2 px-sm-4" id="suma" onclick="suma()">+</button>
+            <button class="btn btn-primary m-2 px-sm-4" id="resta" onclick="resta()">-</button>
+            <button class="btn btn-primary m-2 px-sm-4" id="multiplicacion" onclick="multiplicacion()">*</button>
+            <button class="btn btn-primary m-2 px-sm-4" id="division" onclick="division()">/</button>
+            <button class="btn btn-primary m-2 px-sm-4" id="cuadrado" onclick="cuadrado()">x^2</button>
+            <button class="btn btn-primary m-2 px-sm-4" id="raiz" onclick="raiz()">sqrt(x)</button>
+            <button class="btn btn-primary m-2 px-sm-4" id="potencia" onclick="potencia()">x^y</button>
+        </div>
+        <div> <!-- Resultado-->
+            <label>El resultado es:  <span class="fw-bold" id="resultado"></span></label>
+        </div>
+        <div class="fw-bold my-5">
+            <span>&#169;</span>A01022321 Jairo Said Alonso Espinosa
+        </div>
+    </body>
+</html>
